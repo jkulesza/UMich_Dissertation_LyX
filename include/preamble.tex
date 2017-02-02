@@ -1,0 +1,173 @@
+\usepackage{babel}
+\usepackage{calc}
+\usepackage{caption}
+\usepackage{CJKutf8}
+\usepackage{graphicx}
+\usepackage{hypernat}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage{minitoc}
+\usepackage{nomencl}
+%\usepackage{showframe}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage[figure,table]{totalcount}
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Redefine "\large" for "better" appearance.
+\makeatletter %only needed in preamble
+\renewcommand\large{\@setfontsize\large{12pt}{14.4}}
+\makeatother
+
+% Prepend "Chapter" to chapters (modified later in the appendix).
+\newlength\mylength
+\renewcommand\cftchappresnum{\chaptername~}
+\renewcommand\cftchapaftersnum{:}
+\settowidth\mylength{\cftchappresnum\cftchapaftersnum\quad}
+\addtolength\cftchapnumwidth{\mylength}
+
+% Style chapters, sections, figure, and table labels in ToC, LoF, LoT.
+\renewcommand{\cftchapfont}{\normalfont\sc\bfseries}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftfigfont}{\normalfont\textsc{Figure} }
+\renewcommand{\cfttabfont}{\normalfont\textsc{Table} }
+
+% Indent Table of Contents entries in a particular way.
+\cftsetindents{chapter}{0.0in}{1.20in}
+\cftsetindents{section}{0.10in}{1.10in}
+\cftsetindents{subsection}{0.20in}{1.00in}
+\cftsetindents{subsubsection}{0.30in}{0.90in}
+\cftsetindents{paragraph}{0.40in}{0.80in}
+
+% Style Table of Contents, List of Figures, List of Tables, and List of Appendices headings.
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\sc\bfseries\large}
+\addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\normalfont\sc\bfseries\large}
+\renewcommand{\contentsname}{List of Figures}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\normalfont\sc\bfseries\large}
+\renewcommand{\contentsname}{List of Tables}
+\renewcommand{\cftafterlottitle}{\hfill}
+\newlistof{appendices}{loa}{List of Appendices}
+\renewcommand{\cftloatitlefont}{\hfill\normalfont\sc\bfseries\large}
+\renewcommand{\cftafterloatitle}{\hfill}
+
+% Style chapter, section, subsection, and subsubsection labels.
+\titleformat{\chapter}[display] % command & shape
+{\vspace*{-0.20in}\centering\normalfont\sc\bfseries\large}
+{Chapter \thechapter} % format & label
+{0in} % separation between label and heading
+{\vspace*{0in}\centering\sc\bfseries} % before-code
+[\vspace*{0.10in}] % after-code
+
+\titleformat{\section}[hang] % command & shape
+{\vspace*{-0.25in}\normalfont\bfseries}
+{\thesection} % format & label
+{0.25in} % separation between label and heading
+{} % before-code
+[\vspace*{-0.20in}] % after-code
+
+\titleformat{\subsection}[hang] % command & shape
+{\vspace*{-0.25in}\normalfont\bfseries}
+{\thesubsection} % format & label
+{0.25in} % separation between label and heading
+{} % before-code
+[\vspace*{-0.15in}] % after-code
+
+\titleformat{\subsubsection}[hang] % command & shape
+{\vspace*{-0.25in}\normalfont\bfseries}
+{\thesubsubsection} % format & label
+{0.25in} % separation between label and heading
+{} % before-code
+[\vspace*{-0.15in}] % after-code
+
+% Rename Bibliography to References.
+\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+\addto{\captionsenglish}{\renewcommand{\figurename}{\textsc{Figure}}}
+\addto{\captionsenglish}{\renewcommand{\tablename}{\textsc{Table}}}
+
+% Rename Nomenclature to List of Symbols.
+\renewcommand{\nomname}{List of Symbols}
+
+% Set highlighting color.
+\sethlcolor{green}
+
+% Change nomenclature to include page reference.
+\renewcommand*\pagedeclaration[1]{\ (page~\hyperpage{#1})}
+
+% Redefine some math symbols.
+%\renewcommand{\vec}[1]{\underline{#1}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+%\renewcommand{\hat}[1]{\underline{#1}}
+\renewcommand{\hat}[1]{\mathbf{#1}}
+
+% Force no brackets, parens, etc. around citations.
+\setcitestyle{open={},close={}}
+
+% Redefine bibliography numbering format.
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+% List of Appendix tweaks.
+\makeatletter
+\g@addto@macro\appendix{%
+\let\oldaddcontentsline\addcontentsline
+\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{loa}{#2}{#3}}
+\let\oldpart\part
+\renewcommand*\part[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldpart{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldchapter\chapter
+\renewcommand*\chapter[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldchapter{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsection\section
+\renewcommand*\section[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsubsection\subsection
+\renewcommand*\subsection[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsubsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+\let\oldsubsubsection\subsubsection
+\renewcommand*\subsubsection[1]{%
+  \let\addcontentsline\hackedaddcontentsline%
+  \oldsubsubsection{#1}%
+  \let\addcontentsline\oldaddcontentsline%
+}
+}
+\makeatother
+
+% Create IEEETran supplemental citation command to customize styling.
+\makeatletter
+\def\bstctlcite{\@ifnextchar[{\@bstctlcite}{\@bstctlcite[@auxout]}}
+\def\@bstctlcite[#1]#2{\@bsphack
+  \@for\@citeb:=#2\do{%
+    \edef\@citeb{\expandafter\@firstofone\@citeb}%
+    \if@filesw\immediate\write\csname #1\endcsname{\string\citation{\@citeb}}\fi}%
+  \@esphack}
+\makeatother
+
+% Make the nomenclature.
+\makenomenclature
+
+% Create the LyX logo.
+\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+
+% Separate table caption by an explicit amount.
+\captionsetup[table]{skip=1pt}

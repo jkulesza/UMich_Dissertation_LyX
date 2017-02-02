@@ -1,0 +1,8 @@
+**/._*
+**/*.lyx~
+**/*.lyx#
+**/.DS_Store
+style_guide.pdf
+dissertation.pdf
+dissertation.txt
+references.bib.bak
