@@ -34,7 +34,6 @@
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_author ""
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -131,7 +130,7 @@ filename "include/header_appendix.tex"
 \end_layout
 
 \begin_layout Chapter
-First Appendix
+Second Appendix
 \end_layout
 
 \begin_layout Section

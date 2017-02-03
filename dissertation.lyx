@@ -33,7 +33,6 @@
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_author ""
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -213,6 +212,15 @@ myDepartment}{Nuclear Engineering
 newcommand{
 \backslash
 myUniversity}{University of Michigan}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+myGraduationYear}{2018}
 \end_layout
 
 \begin_layout Plain Layout
@@ -414,7 +422,9 @@ myUniversity
 
 \begin_layout Plain Layout
 
-2018
+
+\backslash
+myGraduationYear
 \end_layout
 
 \begin_layout Plain Layout
@@ -765,7 +775,8 @@ addcontentsline{toc}{chapter}{Acknowledgements}
 
 \begin_layout Plain Layout
 
-Thank you to...
+Thank you to Joel A.
+ Kulesza for providing the template used to present this work.
 \end_layout
 
 \begin_layout Plain Layout
@@ -792,6 +803,13 @@ clearpage
 
 
 \backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 tableofcontents
 \end_layout
 
@@ -804,6 +822,13 @@ tableofcontents
 
 \backslash
 clearpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
 \end_layout
 
 \begin_layout Plain Layout
@@ -829,6 +854,13 @@ addcontentsline{toc}{chapter}{List of Figures}
 
 \backslash
 clearpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
 \end_layout
 
 \begin_layout Plain Layout
@@ -915,6 +947,13 @@ myalength}
 
 
 \backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 listofappendices
 \end_layout
 
@@ -934,6 +973,13 @@ addcontentsline{toc}{chapter}{List of Appendices}
 
 \backslash
 clearpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
 \end_layout
 
 \begin_layout Plain Layout
