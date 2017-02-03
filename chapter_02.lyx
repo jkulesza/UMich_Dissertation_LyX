@@ -34,7 +34,6 @@
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_author ""
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -132,33 +131,6 @@ filename "include/header_chapter.tex"
 
 \begin_layout Chapter
 Methodology
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{page}{1}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-thepage}{
-\backslash
-arabic{page}}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section

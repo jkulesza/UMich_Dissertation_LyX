@@ -616,29 +616,9 @@ clearpage
 
 \begin_layout Plain Layout
 
-%
-\backslash
-vspace*{3.5in}
+
 \backslash
 thispagestyle{empty}
-\backslash
-begin{center}
-\backslash
-textcopyright
-\backslash
- 
-\backslash
-myName, 
-\backslash
-the
-\backslash
-year
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -670,13 +650,13 @@ textcopyright
 \backslash
  
 \backslash
+myName, 
+\backslash
 the
 \backslash
 year
 \backslash
- 
-\backslash
-myName
+
 \backslash
 
 \backslash
