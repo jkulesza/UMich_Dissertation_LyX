@@ -7,4 +7,4 @@ Acknowledgement of the use of this template is not required but is appreciated b
 
 # References
 
-1. [http://www.rackham.umich.edu/downloads/oard-dissertation-format-guidelines.pdf]()
+1. [http://www.rackham.umich.edu/downloads/oard-dissertation-format-guidelines.pdf](http://www.rackham.umich.edu/downloads/oard-dissertation-format-guidelines.pdf)
