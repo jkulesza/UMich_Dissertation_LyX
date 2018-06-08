@@ -150,24 +150,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Titlepage
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-%%%%% %%%%%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 newcommand{
@@ -183,6 +165,24 @@ newcommand{
 \backslash
 myName}{John H.
  Doe}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+myEmail}{uniqname@umich.edu}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+myORCID}{0000-0000-0000-0000}
 \end_layout
 
 \begin_layout Plain Layout
@@ -268,757 +268,89 @@ newcommand{
 myCommitteee}{Professor William Strunk}
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
-\end_layout
-
-\begin_layout Plain Layout
-
-%%%%% %%%%%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-thepage}{
-\backslash
-roman{page}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{1in}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-textsc{
-\backslash
-textbf{
-\backslash
-myTitle}}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{0.25in}
-\end_layout
-
-\begin_layout Plain Layout
-
-by
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{0.25in}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-myName
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{0.5in}
-\end_layout
-
-\begin_layout Plain Layout
-
-A dissertation submitted in partial fulfillment
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-of the requirements for the degree of
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-myDegree
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-(
-\backslash
-myDepartment)
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-in the 
-\backslash
-myUniversity
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-myGraduationYear
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-fill}
-\end_layout
-
-\begin_layout Plain Layout
-
-Doctoral Committee:
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace*{0.25in} 
-\backslash
-myCommitteea
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace*{0.25in} 
-\backslash
-myCommitteeb
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace*{0.25in} 
-\backslash
-myCommitteec
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace*{0.25in} 
-\backslash
-myCommitteed
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hspace*{0.25in} 
-\backslash
-myCommitteee
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Frontispiece
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-fill}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-includegraphics[height=2.5in]{include/frontmatter/frontispiece}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\backslash
-hspace*{0.15in}
-\backslash
-emph{
-\backslash
- }
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-fill}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Copyright
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
 
-\backslash
-thispagestyle{empty}
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/00_titlepage.lyx"
 
+\end_inset
 
-\backslash
-null
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vfill
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-Copyright 
-\backslash
-textcopyright
-\backslash
- 
-\backslash
-myName, 
-\backslash
-the
-\backslash
-year
-\backslash
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-All rights reserved.
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-vfill
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Dedication
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-chapter*{Dedication}
-\backslash
-pagenumbering{roman}
-\backslash
-setcounter{page}{2}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{Dedication}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-For ...
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Acknowledgements
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-chapter*{Acknowledgements}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{Acknowledgements}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-Thank you to Joel A.
- Kulesza for providing the template used to present this work.
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-% Table of Contents, List of Figures, List of Tables, List of Appendices
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-phantomsection
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-tableofcontents
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-phantomsection
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-listoffigures
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{List of Figures}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-phantomsection
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-listoftables
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{List of Tables}
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/01_frontispiece.lyx"
 
+\end_inset
 
-\backslash
-clearpage
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-newlength
-\backslash
-myalength
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand
-\backslash
-cftchappresnum{
-\backslash
-appendixname~}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand
-\backslash
-cftchapaftersnum{:}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-settowidth
-\backslash
-myalength{
-\backslash
-cftchappresnum
-\backslash
-cftchapaftersnum
-\backslash
-quad}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addtolength
-\backslash
-cftchapnumwidth{
-\backslash
-myalength}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-phantomsection
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-listofappendices
-\end_layout
 
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{List of Appendices}   
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
-
-\begin_layout Plain Layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/02_copyright.lyx"
 
-\backslash
-clearpage
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
-
-\backslash
-phantomsection
 \end_layout
-
-\begin_layout Plain Layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/03_dedication.lyx"
 
-\backslash
-printnomenclature
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
-
-\backslash
-addcontentsline{toc}{chapter}{List of Symbols}
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/04_acknowledgements.lyx"
 
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
-% Abstract
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/05_tableofcontents.lyx"
 
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
-
-\backslash
-clearpage
-\backslash
-chapter*{Abstract}
 \end_layout
-
-\begin_layout Plain Layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "include/frontmatter/06_abstract.lyx"
 
-\backslash
-addcontentsline{toc}{chapter}{Abstract}
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
 
-\backslash
-hl{Abstract}
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
+\begin_layout Standard
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
@@ -1037,6 +369,8 @@ bstctlcite{IEEEexample:BSTcontrol}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
