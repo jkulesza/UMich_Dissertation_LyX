@@ -1,4 +1,5 @@
 \usepackage{babel}
+\usepackage{bm}
 \usepackage{calc}
 \usepackage{caption}
 \usepackage{CJKutf8}
@@ -31,11 +32,11 @@
 \addtolength\cftchapnumwidth{\mylength}
 
 % Style chapters, sections, figure, and table labels in ToC, LoF, LoT.
-\renewcommand{\cftchapfont}{\normalfont\sc\bfseries}
+\renewcommand{\cftchapfont}{\normalfont\bfseries}
 \renewcommand{\cftsecfont}{\normalfont}
 \renewcommand{\cftsubsecfont}{\normalfont}
-\renewcommand{\cftfigfont}{\normalfont\textsc{Figure} }
-\renewcommand{\cfttabfont}{\normalfont\textsc{Table} }
+% \renewcommand{\cftfigfont}{\normalfont\textsc{Figure} }
+% \renewcommand{\cfttabfont}{\normalfont\textsc{Table} }
 
 % Indent Table of Contents entries in a particular way.
 \cftsetindents{chapter}{0.0in}{1.20in}
@@ -43,27 +44,40 @@
 \cftsetindents{subsection}{0.20in}{1.00in}
 \cftsetindents{subsubsection}{0.30in}{0.90in}
 \cftsetindents{paragraph}{0.40in}{0.80in}
+\renewcommand\cftfigpresnum{\figurename~}
+\cftsetindents{figure}{0.0in}{0.0in}
+\addtolength\cftfignumwidth{1.20in}
+\renewcommand\cfttabpresnum{\tablename~}
+\cftsetindents{table}{0.0in}{0.0in}
+\addtolength\cfttabnumwidth{1.20in}
 
 % Style Table of Contents, List of Figures, List of Tables, and List of Appendices headings.
-\renewcommand{\cfttoctitlefont}{\hfill\normalfont\sc\bfseries\large}
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\bfseries}
 \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
 \renewcommand{\cftaftertoctitle}{\hfill}
-\renewcommand{\cftloftitlefont}{\hfill\normalfont\sc\bfseries\large}
+
+\renewcommand{\cftloftitlefont}{\hfill\normalfont\bfseries}
 \renewcommand{\contentsname}{List of Figures}
 \renewcommand{\cftafterloftitle}{\hfill}
-\renewcommand{\cftlottitlefont}{\hfill\normalfont\sc\bfseries\large}
+
+\renewcommand{\cftlottitlefont}{\hfill\normalfont\bfseries}
 \renewcommand{\contentsname}{List of Tables}
 \renewcommand{\cftafterlottitle}{\hfill}
-\newlistof{appendices}{loa}{List of Appendices}
-\renewcommand{\cftloatitlefont}{\hfill\normalfont\sc\bfseries\large}
+
+\newlistof{algorithms}{loa}{List of Algorithms}
+\renewcommand{\cftloatitlefont}{\hfill\normalfont\bfseries}
 \renewcommand{\cftafterloatitle}{\hfill}
+
+\newlistof{appendices}{loapp}{List of Appendices}
+\renewcommand{\cftloapptitlefont}{\hfill\normalfont\bfseries}
+\renewcommand{\cftafterloapptitle}{\hfill}
 
 % Style chapter, section, subsection, and subsubsection labels.
 \titleformat{\chapter}[display] % command & shape
-{\vspace*{-0.20in}\centering\normalfont\sc\bfseries\large}
+{\vspace*{-0.20in}\centering\normalfont\bfseries}
 {Chapter \thechapter} % format & label
 {0in} % separation between label and heading
-{\vspace*{0in}\centering\sc\bfseries} % before-code
+{\vspace*{0in}\centering\bfseries} % before-code
 [\vspace*{0.10in}] % after-code
 
 \titleformat{\section}[hang] % command & shape
@@ -89,8 +103,11 @@
 
 % Rename Bibliography to References.
 \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
-\addto{\captionsenglish}{\renewcommand{\figurename}{\textsc{Figure}}}
-\addto{\captionsenglish}{\renewcommand{\tablename}{\textsc{Table}}}
+
+% Restyle figure and table float caption headings (also see caption package call).
+\addto{\captionsenglish}{\renewcommand{\figurename}{Figure}}
+\addto{\captionsenglish}{\renewcommand{\tablename}{Table}}
+% \captionsetup[algorithm]{labelfont={bf,sc},labelsep=colon}
 
 % Rename Nomenclature to List of Symbols.
 \renewcommand{\nomname}{List of Symbols}
@@ -102,13 +119,11 @@
 \renewcommand*\pagedeclaration[1]{\ (page~\hyperpage{#1})}
 
 % Redefine some math symbols.
-%\renewcommand{\vec}[1]{\underline{#1}}
-\renewcommand{\vec}[1]{\mathbf{#1}}
-%\renewcommand{\hat}[1]{\underline{#1}}
-\renewcommand{\hat}[1]{\mathbf{#1}}
+\renewcommand{\vec}[1]{\bm{#1}}
+\renewcommand{\hat}[1]{\bm{#1}}
 
 % Force no brackets, parens, etc. around citations.
-\setcitestyle{open={},close={}}
+% \setcitestyle{open={},close={}}
 
 % Redefine bibliography numbering format.
 \makeatletter
@@ -119,7 +134,7 @@
 \makeatletter
 \g@addto@macro\appendix{%
 \let\oldaddcontentsline\addcontentsline
-\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{loa}{#2}{#3}}
+\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{loapp}{#2}{#3}}
 \let\oldpart\part
 \renewcommand*\part[1]{%
   \let\addcontentsline\hackedaddcontentsline%
