@@ -111,11 +111,9 @@ vspace*{1in}
 
 
 \backslash
-textsc{
-\backslash
 textbf{
 \backslash
-myTitle}}
+myTitle}
 \backslash
 
 \backslash
