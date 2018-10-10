@@ -287,7 +287,19 @@ name "fig:Tree"
 
 \end_inset
 
- Note that Table
+ 
+\end_layout
+
+\begin_layout Standard
+We can also have an equation with vectors, such as
+\begin_inset Formula 
+\begin{equation}
+\vec{x}=a\hat{\Omega}.
+\end{equation}
+
+\end_inset
+
+Note that Table
 \begin_inset space ~
 \end_inset
 
