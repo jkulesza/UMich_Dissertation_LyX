@@ -142,7 +142,11 @@ FUNCTION {default.name.latex.cmd}{ "" }
 
 
 % The default URL prefix.
-FUNCTION {default.name.url.prefix}{ "[Online]. Available:" }
+FUNCTION {default.name.url.prefix}{ "URL:" }
+
+
+% The default DOI prefix.
+FUNCTION {default.name.doi.prefix}{ "DOI:" }
 
 
 % Other controls that cannot be accessed via IEEEtranBSTCTL entry type.
@@ -151,8 +155,6 @@ FUNCTION {default.name.url.prefix}{ "[Online]. Available:" }
 % operate more quietly.
 % #1 enables
 FUNCTION {is.print.banners.to.terminal} { #1 }
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,12 +295,14 @@ ENTRY
     revision
     title
     type
+    doi
     url
     volume
     year
     yearfiled
     CTLuse_article_number
     CTLuse_paper
+    CTLuse_doi
     CTLuse_url
     CTLuse_forced_etal
     CTLmax_names_forced_etal
@@ -308,6 +312,7 @@ ENTRY
     CTLdash_repeated_names
     CTLname_format_string
     CTLname_latex_cmd
+    CTLname_doi_prefix
     CTLname_url_prefix
   }
   {}
@@ -355,6 +360,7 @@ STRINGS { bibinfo
           ALTinterwordstretchfactor
           name.format.string
           name.latex.cmd
+          name.doi.prefix
           name.url.prefix}
 
 
@@ -376,6 +382,7 @@ FUNCTION {initialize.controls}
   default.ALTinterwordstretchfactor 'ALTinterwordstretchfactor :=
   default.name.format.string 'name.format.string :=
   default.name.latex.cmd 'name.latex.cmd :=
+  default.name.doi.prefix 'name.doi.prefix :=
   default.name.url.prefix 'name.url.prefix :=
 }
 
@@ -768,7 +775,8 @@ FUNCTION {either.or.check}
 FUNCTION {empty.entry.warn}
 { author empty$ title empty$ howpublished empty$
   month empty$ year empty$ note empty$ url empty$
-  and and and and and and
+  doi empty$
+  and and and and and and and
     { "all relevant fields are empty in " cite$ * warning$ }
     'skip$
   if$
@@ -1966,30 +1974,44 @@ cap.status.std
 
 
 
-%% URL
+%% URL & DOI (with DOI superseding URL if both are present)
+% Modification based on: https://tex.stackexchange.com/a/255023/82104
 
 FUNCTION {format.url}
-{ is.use.url
-    { url empty$
-      { "" }
-      { this.to.prev.status
-        this.status.std
-        cap.yes 'status.cap :=
-        name.url.prefix " " *
-        "\url{" * url * "}" *
-        punct.no 'this.status.punct :=
-        punct.period 'prev.status.punct :=
-        space.normal 'this.status.space :=
-        space.normal 'prev.status.space :=
-        quote.no 'this.status.quote :=
-      }
-    if$
+{
+  doi empty$
+    {
+      url
+      duplicate$ empty$
+        { pop$ "" }
+        {
+          this.to.prev.status
+          this.status.std
+          cap.yes 'status.cap :=
+          name.url.prefix " " *
+          "\url{" * swap$ * "}" *
+          punct.no 'this.status.punct :=
+          punct.period 'prev.status.punct :=
+          space.normal 'this.status.space :=
+          space.normal 'prev.status.space :=
+          quote.no 'this.status.quote :=
+        }
+      if$
     }
-    { "" }
+    {
+      this.to.prev.status
+      this.status.std
+      cap.yes 'status.cap :=
+      name.doi.prefix " " *
+      "\href{https://doi.org/" * doi * "}{" * doi * "}" *
+      punct.no 'this.status.punct :=
+      punct.period 'prev.status.punct :=
+      space.normal 'this.status.space :=
+      space.normal 'prev.status.space :=
+      quote.no 'this.status.quote :=
+    }
   if$
 }
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -2426,7 +2448,13 @@ FUNCTION {IEEEtranBSTCTL}
       'name.url.prefix :=
     }
   if$
-
+  CTLname_doi_prefix
+  missing$
+    { skip$ }
+    { CTLname_doi_prefix
+      'name.doi.prefix :=
+    }
+  if$
 
   num.names.shown.with.forced.et.al max.num.names.before.forced.et.al >
     { "CTLnames_show_etal cannot be greater than CTLmax_names_forced_etal in " cite$ * warning$
