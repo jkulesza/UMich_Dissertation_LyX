@@ -118,14 +118,14 @@ phantomsection
 
 
 \backslash
-listoffigures
+addcontentsline{toc}{chapter}{List of Figures}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Figures}
+listoffigures
 \end_layout
 
 \begin_layout Plain Layout
@@ -150,14 +150,14 @@ phantomsection
 
 
 \backslash
-listoftables
+addcontentsline{toc}{chapter}{List of Tables}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Tables}
+listoftables
 \end_layout
 
 \begin_layout Plain Layout
@@ -237,14 +237,18 @@ phantomsection
 
 
 \backslash
-listofappendices
+addcontentsline{toc}{chapter}{List of Appendices} 
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Appendices}   
+listofappendices
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -269,14 +273,18 @@ phantomsection
 
 
 \backslash
-printnomenclature
+addcontentsline{toc}{chapter}{List of Symbols}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-addcontentsline{toc}{chapter}{List of Symbols}
+printnomenclature
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
