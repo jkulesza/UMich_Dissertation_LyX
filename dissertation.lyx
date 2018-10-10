@@ -200,9 +200,7 @@ myDegree}{Doctor of Philosophy}
 \backslash
 newcommand{
 \backslash
-myDepartment}{Nuclear Engineering 
-\backslash
-& Radiological Sciences}
+myDepartment}{Nuclear Engineering and Radiological Sciences}
 \end_layout
 
 \begin_layout Plain Layout
