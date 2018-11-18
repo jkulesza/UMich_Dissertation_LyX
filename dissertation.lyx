@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -25,6 +25,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -64,6 +66,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \branch Frontmatter
 \selected 1
 \filename_suffix 0
@@ -96,7 +99,10 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip 15pt
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -141,6 +147,7 @@ include
 \begin_layout Standard
 \noindent
 \begin_inset Branch Frontmatter
+inverted 0
 status open
 
 \begin_layout Standard
@@ -427,6 +434,7 @@ filename "chapter_03.lyx"
 
 \begin_layout Standard
 \begin_inset Branch Bibliography
+inverted 0
 status open
 
 \begin_layout Standard
@@ -466,7 +474,7 @@ filename "include/bibliography.lyx"
 \begin_layout Standard
 \start_of_appendix
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -532,8 +540,6 @@ centering
 \backslash
 normalfont
 \backslash
-sc
-\backslash
 bfseries
 \backslash
 large}
@@ -558,8 +564,6 @@ thechapter} % format & label
 vspace*{0in}
 \backslash
 centering
-\backslash
-sc
 \backslash
 bfseries} % before-code
 \end_layout
